@@ -14,7 +14,7 @@
           <img src="logo.png" alt="Logo">
         </div>
         <nav class="nav-links">
-          <a href="#">Product</a>
+          <a href="index.html">Product</a>
           <a href="#">About Me</a>
         </nav>
 
@@ -24,52 +24,108 @@
           <img src="assets/carousell_icon.png" alt="carousell_icon">
         </div>
       </header>
-
-      <div class="slideshow-container">
-        <img class="product-image-slideshow" src="assets/funko_sample_1.png" alt="Product 1">
-        <img class="product-image-slideshow" src="assets/funko_sample_2.png" alt="Product 2">
+      <div id="container">
+        <div class="content">
+          <div class="zoomed">
+          <img src="assets/funko_sample_1.png" alt="T-Shirt front" id="display" class="slides">
+          <img src="assets/funko_sample_2.png" class="slides" alt="T-shirt Back">
+		  <a class="prev" onclick="nextSlide(-1)">❮</a>
+		  <a class="next" onclick="nextSlide(1)">❯</a>
+          </div>
+          </div>
+          
+      
+          <div class="thumbnails">
+            <img src="assets/funko_sample_1.png" onClick="currentSlide(1)" alt="T-Shirt front" class="thumb">
+          <img src="assets/funko_sample_2.png" onClick="currentSlide(2)" alt="T-shirt Back" class="thumb">
         </div>
-        <!-- Add more product images as needed -->
+      
         
-        <div class="slideshow-controls">
-          <button class="slideshow-control" onclick="changeSlide(0)">1</button>
-          <button class="slideshow-control" onclick="changeSlide(1)">2</button>
-          <!-- Add more slideshow control buttons as needed -->
-        </div>
-        <script>
-            var slideIndex = 0;
-            var slides = document.getElementsByClassName("product-image-slideshow");
-            var controls = document.getElementsByClassName("slideshow-control");
-            
-            showSlide(slideIndex);
-            
-            function changeSlide(index) {
-              showSlide(index);
-            }
-            
-            function showSlide(index) {
-              if (index >= slides.length) {
-                slideIndex = 0;
-              } else if (index < 0) {
-                slideIndex = slides.length - 1;
-              } else {
-                slideIndex = index;
-              }
-              
-              for (var i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-              }
-              
-              for (var i = 0; i < controls.length; i++) {
-                controls[i].classList.remove("active");
-              }
-              
-              slides[slideIndex].style.display = "block";
-              controls[slideIndex].classList.add("active");
-            }
+
+      <script>
+     	var slideIndex = 1;
+	showSlides(slideIndex);
+
+  	
+	function nextSlide(p){
+		
+		showSlides(slideIndex += p);
+		
+		
+	}
+	
+	
+	
+	function currentSlide(v){
+		
+		showSlides(slideIndex = v);
+		
+		
+	}
+	
+	function showSlides(v){
+		
+		var thumbs = document.getElementsByClassName("thumb");
+		var slides = document.getElementsByClassName("slides");
+		var i;
+		
+		if(v > slides.length){
+			
+			slideIndex = 1;
+		}
+		
+		if(v < 1){
+			
+			slideIndex = slides.length;
+		}
+		
+		for(i = 0; i < slides.length; i++){
+			
+			slides[i].style.display = "none";
+		}
+		
+		for(i = 0; i < thumbs.length; i++){
+			
+			thumbs[i].className = thumbs[i].className.replace(" active", "");
+			
+		}
+		
+	    slides[slideIndex-1].style.display = "block";
+		thumbs[slideIndex-1].className += " active";
+		
+		
+	}
+	
+	 var x = document.getElementById("main-lang-selector");
+	var y = document.getElementById("parallax");
+	var z = document.getElementById("language-selector");
+	var body = document.getElementById("body");
+	
+	function myLang(t){
+
+			
+			z.style.display = "block";
+			x.style.display = "block";
+			y.style.display = "none";
+			body.style.overflow = "hidden";
+		
+		
+	}
+
+window.onclick = function(event){
+			   
+	if(event.target == z){
+		
+		z.style.display = "none";
+		x.style.display = "none";
+		y.style.display = "block";
+		body.style.overflow = "auto";
+		
+	}
+}
 
     
-            </script>
+         </script>
 </body>
 
 </html>

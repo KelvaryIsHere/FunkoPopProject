@@ -155,7 +155,17 @@ body {
    .slideshow-container {
       position: relative;
       max-width: 600px;
-      margin: auto;
+
+      height: auto;
+    display: flex;
+     padding-top: 7%;
+     padding-bottom: 5%;
+     flex-direction: row;
+      position: relative;
+      flex-flow: row wrap;
+    justify-content: space-around;
+    font-family: "arial";
+    word-spacing: normal;
       }
     
     .product-image-slideshow {
@@ -167,7 +177,7 @@ body {
     
     .slideshow-controls {
       text-align: center;
-      margin-top: 10px;
+
     }
     
     .slideshow-controls button {
@@ -183,38 +193,50 @@ body {
       background-color: #999;
     }
 
-    .arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 30px;
-      height: 30px;
-      background-color: #ccc;
-      cursor: pointer;
-      transition: background-color 0.3s ease-in-out;
-    }
-    
-    .arrow:hover {
-      background-color: #555;
-    }
-    
-    .arrow:before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border-top: 6px solid transparent;
-      border-bottom: 6px solid transparent;
-    }
-    
-    .arrow.left:before {
-      border-right: 8px solid #fff;
-    }
-    
-    .arrow.right:before {
-      border-left: 8px solid #fff;
-    }
+    #container {width: 25%;
+      height: 100%;
+    margin: 3%;
+    float: left;
+  border: 3px rgba(17,145,165,1.00) solid;
+  background-color: white;
+   position: relative;}
 
-    
+.thumbnails {display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       grid-gap: 2px;}
+
+  .content img, .thumbnails img {width: 100%; }
+
+       .active, .thumb:hover {opacity: 0.4;     
+        background-color: rgba(17,145,165,1.00);   
+        cursor: pointer;}
+
+        .prev,
+        .next {
+          cursor: pointer;
+          position: absolute;
+          top: 40%;
+          width: auto;
+          padding: 16px;
+          margin-top: -50px;
+          color: black;
+          font-weight: bold;
+          font-size: 20px;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          -webkit-user-select: none;
+        }
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+        
+     

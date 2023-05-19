@@ -8,53 +8,53 @@ body {
 
 /* Navigation Bar */
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #2EB65C;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #2EB65C;
+}
 
-  .logo {
-    flex: 1;
-  }
+.logo {
+  flex: 1;
+}
 
-  .nav-links {
-    flex: 2;
-    text-align: center;
-  }
+.nav-links {
+  flex: 2;
+  text-align: center;
+}
 
-  .nav-links a {
-    margin-right: 20px;
-    text-decoration: none;
-    font-size: 18px;
-    color: white;
-    padding: 0px 10px 0px;
-  }
+.nav-links a {
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  padding: 0px 10px 0px;
+}
 
-  .nav-links a:hover, .nav-links a:active  {
-    border: 3px solid #DFBC04;
-    border-radius: 20px;
-    background-color: #DFBC04;
-  }
+.nav-links a:hover, .nav-links a:active  {
+  border: 3px solid #DFBC04;
+  border-radius: 20px;
+  background-color: #DFBC04;
+}
 
-  .social-icons {
-    flex: 1;
-    text-align: right;
-    display: inline-block;
-  }
+.social-icons {
+  flex: 1;
+  text-align: right;
+  display: inline-block;
+}
 
-  .social-icons img  {
-    width: 20px;
-    margin-left: 10px;
-    vertical-align: bottom;
-  }
+.social-icons img  {
+  width: 20px;
+  margin-left: 10px;
+  vertical-align: bottom;
+}
 
-  .social-icons i {
-    width: 20px;
-    margin-left: 10px;
+.social-icons i {
+  width: 20px;
+  margin-left: 10px;
 
-  }
+}
 
   /* Footer */
   .footer {
@@ -150,7 +150,6 @@ body {
     color: #888;
   }
 
- AboutMe
   /* About me centre text*/
   .first-text {
     text-align: center;
@@ -167,12 +166,7 @@ body {
   }
 
   /* paralx */
-  body, html {
-    height: 100%;
-    margin: 0;
-    font: 400 15px/1.8 "Lato", sans-serif;
-    color: #777;
-  }
+  
   
    .bgimg-2, .bgimg-3 {
     position: relative;
@@ -186,14 +180,13 @@ body {
  
   
   .bgimg-2 {
-    background-image: url("img_parallax2.jpg");
+    background-image: url("https://cdn1.epicgames.com/offer/24b9b5e323bc40eea252a10cdd3b2f10/LOL_2560x1440-98749e0d718e82d27a084941939bc9d3");
     min-height: 400px;
   }
   
   .bgimg-3 {
-    background-image: url("download.jpg");
+    background-image: url("https://play-lh.googleusercontent.com/niYb9s1swi3drT-99jN0gvFiHknFcPPIU06BiBUtvIHhMcghLVpBdG1rLtLdIDPRm8WT=w526-h296-rw");
     min-height: 400px;
-    width: 1000px;
     background-size: cover;
   }
   
@@ -214,13 +207,12 @@ body {
     letter-spacing: 10px;
   }
   
-  h3 {
+  /* h3 {
     letter-spacing: 5px;
     text-transform: uppercase;
-    font: 20px "Lato", sans-serif;
     color: #111;
   }
-  
+   */
   /* Turn off parallax scrolling for tablets and phones */
   @media only screen and (max-device-width: 1024px) {
     .bgimg-1, .bgimg-2, .bgimg-3 {

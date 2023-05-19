@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Brandon's Funk Pop</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+          <img src="logo.png" alt="Logo">
+        </div>
+        <nav class="nav-links">
+          <a href="#">Product</a>
+          <a href="#">About Me</a>
+        </nav>
+
+        <div class="social-icons">
+          <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
+          <i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>
+          <img src="assets/carousell_icon.png" alt="carousell_icon">
+        </div>
+      </header>
+
+      <div class="slideshow-container">
+        <img class="product-image-slideshow" src="assets/funko_sample_1.png" alt="Product 1">
+        <img class="product-image-slideshow" src="assets/funko_sample_2.png" alt="Product 2">
+        </div>
+        <!-- Add more product images as needed -->
+        
+        <div class="slideshow-controls">
+          <button class="slideshow-control" onclick="changeSlide(0)">1</button>
+          <button class="slideshow-control" onclick="changeSlide(1)">2</button>
+          <!-- Add more slideshow control buttons as needed -->
+        </div>
+        <script>
+            var slideIndex = 0;
+            var slides = document.getElementsByClassName("product-image-slideshow");
+            var controls = document.getElementsByClassName("slideshow-control");
+            
+            showSlide(slideIndex);
+            
+            function changeSlide(index) {
+              showSlide(index);
+            }
+            
+            function showSlide(index) {
+              if (index >= slides.length) {
+                slideIndex = 0;
+              } else if (index < 0) {
+                slideIndex = slides.length - 1;
+              } else {
+                slideIndex = index;
+              }
+              
+              for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              
+              for (var i = 0; i < controls.length; i++) {
+                controls[i].classList.remove("active");
+              }
+              
+              slides[slideIndex].style.display = "block";
+              controls[slideIndex].classList.add("active");
+            }
+
+    
+            </script>
+</body>
+
+</html>

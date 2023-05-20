@@ -54,3 +54,23 @@ window.onclick = function (event) {
     body.style.overflow = "auto";
   }
 };
+
+var selectedProduct = JSON.parse(localStorage.getItem("selectedProduct"));
+
+// Check if there is a selected product
+if (selectedProduct) {
+  // Retrieve the product content elements
+  var productTitleElement = document.querySelector(".product-title-item");
+  var productPriceElement = document.querySelector(".product-price-item");
+  var productStockElement = document.querySelector(".product-stock-status");
+  var productQualityElement = document.querySelector(".product-quality-status");
+
+  // Update the product content with the retrieved data
+  productTitleElement.textContent = selectedProduct.name;
+  productPriceElement.textContent = selectedProduct.price;
+  productStockElement.textContent = selectedProduct.stock;
+  productQualityElement.textContent = selectedProduct.quality;
+
+  // Clear the selected product data from local storage (optional)
+  localStorage.removeItem("selectedProduct");
+}

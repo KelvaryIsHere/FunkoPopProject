@@ -104,6 +104,15 @@ body {
   gap: 20px;
 }
 
+.product-list-featured {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
 .product {
   display: flex;
   flex-direction: column;

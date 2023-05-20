@@ -3,7 +3,7 @@
 body {
   margin: 0px;
   padding: 0px;
-  font-family: Gill Sans MT; 
+  font-family: Gill Sans MT;
 }
 
 /* Navigation Bar */
@@ -12,7 +12,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  background-color: #2EB65C;
+  background-color: #2eb65c;
 }
 
 .logo {
@@ -32,10 +32,11 @@ body {
   padding: 0px 10px 0px;
 }
 
-.nav-links a:hover, .nav-links a:active  {
-  border: 3px solid #DFBC04;
+.nav-links a:hover,
+.nav-links a:active {
+  border: 3px solid #dfbc04;
   border-radius: 20px;
-  background-color: #DFBC04;
+  background-color: #dfbc04;
 }
 
 .social-icons {
@@ -44,7 +45,7 @@ body {
   display: inline-block;
 }
 
-.social-icons img  {
+.social-icons img {
   width: 20px;
   margin-left: 10px;
   vertical-align: bottom;
@@ -53,248 +54,309 @@ body {
 .social-icons i {
   width: 20px;
   margin-left: 10px;
-
 }
 
-  /* Footer */
-  .footer {
-    background-color: #2EB65C;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+/* Footer */
+.footer {
+  background-color: #2eb65c;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
 
-  .footer-left {
-    flex: 1;
-  }
+.footer-left {
+  flex: 1;
+}
 
-  .footer-left p {
-    margin: 0;
-    font-size: 14px;
-    vertical-align: middle;
-  }
+.footer-left p {
+  margin: 0;
+  font-size: 14px;
+  vertical-align: middle;
+}
 
-  .footer-right {
-    flex: 1;
-    text-align: right;
-  }
+.footer-right {
+  flex: 1;
+  text-align: right;
+}
 
-  .footer-right p {
-    margin: 0;
-    font-size: 14px;
-    display: inline;
-    vertical-align: middle;
-  }
+.footer-right p {
+  margin: 0;
+  font-size: 14px;
+  display: inline;
+  vertical-align: middle;
+}
 
-  /* Product */
+/* Product */
 
+.featured-heading {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
 
-  .featured-heading {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  gap: 20px;
+}
 
-  .product-list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 40px;
-    gap: 20px;
-    }
+.product {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
 
-  .product {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-  }
+.product-image {
+  flex: 1;
+}
 
-  .product-image {
-    flex: 1;
-  }
+.product-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
 
-  .product-image img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 5px;
-    cursor: pointer;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-  }
+.product-image img:hover {
+  transform: scale(1.05, 1.05);
+}
 
-  .product-image img:hover {
-    transform: scale(1.05,1.05);
-  }
+.product-details {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
 
-  .product-details {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-  }
+.product-title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
 
-  .product-title {
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 5px;
-  }
+.product-price {
+  font-size: 14px;
+  color: #888;
+}
 
-  .product-price {
-    font-size: 14px;
-    color: #888;
-  }
+#product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  height: auto;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 
-  /* About me centre text*/
-  .first-text {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .second-text {
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 24px;
-  }
+#product-content {
+  width: clamp(50vw, 20em, 200vw);
+  height: auto;
+  align-self: center;
+}
 
-  /* paralx */
-  
-  
-   .bgimg-2, .bgimg-3 {
-    position: relative;
-    opacity: 0.65;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  
-  }
- 
-  
-  .bgimg-2 {
-    background-image: url("https://cdn1.epicgames.com/offer/24b9b5e323bc40eea252a10cdd3b2f10/LOL_2560x1440-98749e0d718e82d27a084941939bc9d3");
-    min-height: 400px;
-  }
-  
-  .bgimg-3 {
-    background-image: url("https://play-lh.googleusercontent.com/niYb9s1swi3drT-99jN0gvFiHknFcPPIU06BiBUtvIHhMcghLVpBdG1rLtLdIDPRm8WT=w526-h296-rw");
-    min-height: 400px;
-    background-size: cover;
-  }
-  
-  .caption {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 100%;
-    text-align: center;
-    color: #000;
-  }
-  
-  .caption span.border {
-    background-color: #111;
-    color: #fff;
-    padding: 18px;
-    font-size: 25px;
-    letter-spacing: 10px;
-  }
-  
-  /* h3 {
+.product-title-item {
+  font-weight: bolder;
+  font-size: 56px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.product-price-item {
+  font-size: 30px;
+  color: #888;
+}
+
+.product-description-item {
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+.product-stock-heading {
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.product-stock-status {
+  font-size: 18px;
+  color: #2eb65c;
+  margin-top: 2px;
+}
+.product-quality-status {
+  font-size: 18px;
+  color: black;
+  margin-top: 2px;
+}
+.product-interested-item {
+  font-size: 18px;
+  color: #2eb65c;
+  margin-top: 21px;
+  font-weight: bold;
+}
+/* About me centre text*/
+.first-text {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.second-text {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+/* parallax */
+
+.bgimg-2,
+.bgimg-3 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bgimg-2 {
+  background-image: url("https://cdn1.epicgames.com/offer/24b9b5e323bc40eea252a10cdd3b2f10/LOL_2560x1440-98749e0d718e82d27a084941939bc9d3");
+  min-height: 400px;
+}
+
+.bgimg-3 {
+  background-image: url("https://play-lh.googleusercontent.com/niYb9s1swi3drT-99jN0gvFiHknFcPPIU06BiBUtvIHhMcghLVpBdG1rLtLdIDPRm8WT=w526-h296-rw");
+  min-height: 400px;
+  background-size: cover;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+/* h3 {
     letter-spacing: 5px;
     text-transform: uppercase;
     color: #111;
   }
    */
-  /* Turn off parallax scrolling for tablets and phones */
-  @media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3 {
-      background-attachment: scroll;
-    }
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1,
+  .bgimg-2,
+  .bgimg-3 {
+    background-attachment: scroll;
   }
-  /* Product slideshow*/
+}
+/* Product slideshow*/
 
-   .slideshow-container {
-      position: relative;
-      max-width: 600px;
+.slideshow-container {
+  position: relative;
+  max-width: 600px;
+  height: auto;
+  display: flex;
+  padding-top: 7%;
+  padding-bottom: 5%;
+  flex-direction: row;
+  position: relative;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  font-family: "arial";
+  word-spacing: normal;
+}
 
-      height: auto;
-    display: flex;
-     padding-top: 7%;
-     padding-bottom: 5%;
-     flex-direction: row;
-      position: relative;
-      flex-flow: row wrap;
-    justify-content: space-around;
-    font-family: "arial";
-    word-spacing: normal;
-      }
-    
-    .product-image-slideshow {
-      display: none;
-      width: 100%;
-      height: auto;
-      border: 2px solid black;   
-    }
-    
-    .slideshow-controls {
-      text-align: center;
+.product-image-slideshow {
+  display: none;
+  width: 100%;
+  height: auto;
+  border: 2px solid black;
+}
 
-    }
-    
-    .slideshow-controls button {
-      background-color: #ddd;
-      border: none;
-      color: #000;
-      padding: 8px 16px;
-      margin: 0 4px;
-      cursor: pointer;
-    }
-    
-    .slideshow-controls button.active {
-      background-color: #999;
-    }
+.slideshow-controls {
+  text-align: center;
+}
 
-    #container {width: 25%;
-      height: 100%;
-    margin: 3%;
-    float: left;
-  border: 3px rgba(17,145,165,1.00) solid;
+.slideshow-controls button {
+  background-color: #ddd;
+  border: none;
+  color: #000;
+  padding: 8px 16px;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.slideshow-controls button.active {
+  background-color: #999;
+}
+
+#container {
+  width: clamp(20vw, 20em, 100vw);
+  height: auto;
+  border: 3px black solid;
+  background-color: rgb(226, 222, 222);
+  position: relative;
+}
+
+.thumbnails {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2px;
+  position: relative;
+}
+
+.content img,
+.thumbnails img {
+  width: 100%;
+}
+
+.active,
+.thumb:hover {
+  opacity: 0.4;
   background-color: white;
-   position: relative;}
+  cursor: pointer;
+}
 
-.thumbnails {display: grid;
-       grid-template-columns: repeat(3, 1fr);
-       grid-gap: 2px;}
-
-  .content img, .thumbnails img {width: 100%; }
-
-       .active, .thumb:hover {opacity: 0.4;     
-        background-color: rgba(17,145,165,1.00);   
-        cursor: pointer;}
-
-        .prev,
-        .next {
-          cursor: pointer;
-          position: absolute;
-          top: 40%;
-          width: auto;
-          padding: 16px;
-          margin-top: -50px;
-          color: black;
-          font-weight: bold;
-          font-size: 20px;
-          border-radius: 0 3px 3px 0;
-          user-select: none;
-          -webkit-user-select: none;
-        }
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
 
 .next {
   right: 0;
@@ -307,4 +369,3 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
 }
-        

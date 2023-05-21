@@ -64,6 +64,23 @@ if (selectedProduct) {
   var productPriceElement = document.querySelector(".product-price-item");
   var productStockElement = document.querySelector(".product-stock-status");
   var productQualityElement = document.querySelector(".product-quality-status");
+  var thumbnailImage1 = document.querySelector("#thumb-front");
+  var thumbnailImage2 = document.querySelector("#thumb-back");
+  var slideshowImage1 = document.querySelector("#slide-front");
+  var slideshowImage2 = document.querySelector("#slide-back");
+
+  // Set the source of the slideshow image based on the index
+  slideshowImage1.src = selectedProduct.image;
+  slideshowImage1.alt = "Funko Pop";
+
+  thumbnailImage1.src = selectedProduct.image;
+  thumbnailImage1.alt = "Funko Pop";
+
+  slideshowImage2.src = selectedProduct.imageHover;
+  slideshowImage2.alt = "Funko Pop";
+
+  thumbnailImage2.src = selectedProduct.imageHover;
+  thumbnailImage2.alt = "Funko Pop";
 
   // Update the product content with the retrieved data
   productTitleElement.textContent = selectedProduct.name;

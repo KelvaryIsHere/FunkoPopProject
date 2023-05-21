@@ -17,6 +17,24 @@ var products = [
     stock: "Available Test 2",
     quality: "Brand New Test 2",
   },
+  {
+    id: 3,
+    name: "POP! DIE-CAST IRON MAN",
+    price: "$50.00",
+    image: "assets/FunkLisingSample/IronManFront.png",
+    imageHover: "assets/FunkLisingSample/IronManBack.png",
+    stock: "Available Test 3",
+    quality: "Brand New Test 3",
+  },
+  {
+    id: 4,
+    name: "VINYL GOLD 5 NOTORIOUS B.I.G. IN WHITE SUIT",
+    price: "$50.00",
+    image: "assets/FunkLisingSample/BiggieFront.png",
+    imageHover: "assets/FunkLisingSample/BiggieBack.png",
+    stock: "Available Test 3",
+    quality: "Brand New Test 3",
+  },
   // Add more product objects here as needed
 ];
 

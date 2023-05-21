@@ -330,6 +330,7 @@ body {
   border: 3px black solid;
   background-color: rgb(226, 222, 222);
   position: relative;
+  overflow: hidden;
 }
 
 .thumbnails {
@@ -342,6 +343,16 @@ body {
 .content img,
 .thumbnails img {
   width: 100%;
+  transition: transform 0.2s;
+  transform-origin: center;
+}
+
+.content img {
+  cursor: zoom-in;
+}
+
+.content img:hover {
+  transform: scale(3);
 }
 
 .active,

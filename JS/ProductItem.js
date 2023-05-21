@@ -56,6 +56,7 @@ window.onclick = function (event) {
 };
 
 var selectedProduct = JSON.parse(localStorage.getItem("selectedProduct"));
+var slideshowThumb = document.querySelector(".thumb");
 
 // Check if there is a selected product
 if (selectedProduct) {
@@ -89,5 +90,48 @@ if (selectedProduct) {
   productQualityElement.textContent = selectedProduct.quality;
 
   // Clear the selected product data from local storage (optional)
-  localStorage.removeItem("selectedProduct");
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  var slideshow = document.querySelector(".content");
+  var next = document.querySelector(".next");
+  var prev = document.querySelector(".prev");
+
+  slideshow.addEventListener("mousemove", function (event) {
+    var img = this.querySelector("#slide-front");
+    var rect = img.getBoundingClientRect();
+    var x = ((event.pageX - rect.left) / rect.width) * 100;
+    var y = ((event.pageY - rect.top) / rect.height) * 100;
+    img.style.transformOrigin = x + "% " + y + "%";
+    thumbnailImage1.style.visibility = "hidden";
+    thumbnailImage2.style.visibility = "hidden";
+    next.style.visibility = "hidden";
+    prev.style.visibility = "hidden";
+  });
+
+  slideshow.addEventListener("mouseout", function (event) {
+    thumbnailImage1.style.visibility = "visible";
+    thumbnailImage2.style.visibility = "visible";
+    next.style.visibility = "visible";
+    prev.style.visibility = "visible";
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var slideshow = document.querySelector(".content");
+
+  slideshow.addEventListener("mousemove", function (event) {
+    var img = this.querySelector("#slide-back");
+    var rect = img.getBoundingClientRect();
+    var x = ((event.pageX - rect.left) / rect.width) * 100;
+    var y = ((event.pageY - rect.top) / rect.height) * 100;
+    img.style.transformOrigin = x + "% " + y + "%";
+    thumbnailImage1.style.visibility = "hidden";
+    thumbnailImage2.style.visibility = "hidden";
+  });
+
+  slideshow.addEventListener("mouseout", function (event) {
+    thumbnailImage1.style.visibility = "visible";
+    thumbnailImage2.style.visibility = "visible";
+  });
+});

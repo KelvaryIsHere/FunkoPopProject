@@ -114,7 +114,3 @@ function selectProduct(productId) {
   // Redirect to the product details page
   window.location.href = "product-item.html";
 }
-
-window.addEventListener("popstate", function () {
-  location.reload();
-});

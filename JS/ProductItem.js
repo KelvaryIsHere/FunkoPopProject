@@ -135,3 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
     thumbnailImage2.style.visibility = "visible";
   });
 });
+
+window.addEventListener("popstate", function () {
+  location.reload();
+});

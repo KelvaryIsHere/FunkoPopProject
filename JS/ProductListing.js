@@ -7,6 +7,8 @@ var products = [
     imageHover: "assets/FunkLisingSample/FunkoVaderBack.png",
     stock: "Available Test 1",
     quality: "Brand New Test 1",
+    description:
+      "Feel a stellar pull towards the Funko exclusive Pop! Mega Darth Vader from Star Wars™. An entire galaxy of adventures awaits! Bring home all the adventures by uniting all your favorite characters from memorable movie and television series moments. Celebrate the most stellar fandom of them all. Vinyl bobblehead is approximately 18-inches tall.",
   },
   {
     id: 2,
@@ -16,6 +18,8 @@ var products = [
     imageHover: "assets/FunkLisingSample/MegaBobaBack.png",
     stock: "Available Test 2",
     quality: "Brand New Test 2",
+    description:
+      "Boba Fett, the unaltered clone/son of Jango Fett, reemerges from the shadows wearing his father's famous armor and blaster at the ready. Celebrate the most stellar fandom of them all with the Star Wars™ Mega Pop! Boba Fett. Vinyl figure is 18-inches tall.",
   },
   {
     id: 3,
@@ -25,6 +29,8 @@ var products = [
     imageHover: "assets/FunkLisingSample/IronManBack.png",
     stock: "Available Test 3",
     quality: "Brand New Test 3",
+    description:
+      "Behold! The new premiere Pop! figure, designed to be the front and center, top-shelf collectible, the Die-cast Pop! series. These figures come in die-cast acrylic cases featuring etched details and fasten to the base of the case. The case can be opened, and the figure detached from the base, but with a clear view of all sides of your collectible, you won’t need to unbox it to see all the details. These collectibles come in a telescoping box that features foil details and a foam inner linings to further protect the collectible while in transit. Continue your Die-cast Pop! collection with Marvel’s Pop! Iron Man. Bring home the classic hero Iron Man, aka Tony Stark, as a Die-cast Pop! to crown your Marvel lineup.Die-cast figure is approximately 4-inches tall. Approximate case dimensions: 4.5“W x 6.25“H x 3.5“D.",
   },
   {
     id: 4,
@@ -32,8 +38,10 @@ var products = [
     price: "$50.00",
     image: "assets/FunkLisingSample/BiggieFront.png",
     imageHover: "assets/FunkLisingSample/BiggieBack.png",
-    stock: "Available Test 3",
-    quality: "Brand New Test 3",
+    stock: "Available Test 4",
+    quality: "Brand New Test 4",
+    description:
+      "Go for GOLD in your music collection with the new Funko GOLD Notorious B.I.G. premium vinyl figure. Notorious B.I.G. is dressed to the nines in his white suit for this 5-inch tall collectible. GOLD is the perfect way to commemorate some of your favorite, iconic music artists in your collection, and each figure comes in a sleek, display-ready box that is easy to stack with other GOLD collectibles. Vinyl figure is 5-inches tall.",
   },
   // Add more product objects here as needed
 ];

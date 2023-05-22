@@ -65,6 +65,9 @@ if (selectedProduct) {
   var productPriceElement = document.querySelector(".product-price-item");
   var productStockElement = document.querySelector(".product-stock-status");
   var productQualityElement = document.querySelector(".product-quality-status");
+  var productDescriptionElement = document.querySelector(
+    ".product-description-item"
+  );
   var thumbnailImage1 = document.querySelector("#thumb-front");
   var thumbnailImage2 = document.querySelector("#thumb-back");
   var slideshowImage1 = document.querySelector("#slide-front");
@@ -86,6 +89,7 @@ if (selectedProduct) {
   // Update the product content with the retrieved data
   productTitleElement.textContent = selectedProduct.name;
   productPriceElement.textContent = selectedProduct.price;
+  productDescriptionElement.textContent = selectedProduct.description;
   productStockElement.textContent = selectedProduct.stock;
   productQualityElement.textContent = selectedProduct.quality;
 

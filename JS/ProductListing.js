@@ -104,16 +104,6 @@ products.forEach(function (product) {
   });
 });
 
-// function selectProduct(productId) {
-//   var selectedProduct = products.find(function (product) {
-//     return product.id === productId;
-//   });
-
-//   localStorage.setItem("selectedProduct", JSON.stringify(selectedProduct));
-
-//   console.log(JSON.stringify(selectedProduct));
-// }
-
 function selectProduct(productId) {
   var selectedProduct = products.find(function (product) {
     return product.id === productId;
@@ -124,3 +114,7 @@ function selectProduct(productId) {
   // Redirect to the product details page
   window.location.href = "product-item.html";
 }
+
+window.addEventListener("popstate", function () {
+  location.reload();
+});

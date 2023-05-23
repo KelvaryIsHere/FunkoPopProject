@@ -6,6 +6,10 @@ body {
   font-family: Gill Sans MT;
 }
 
+.social-icons a {
+  text-decoration: none;
+}
+
 /* Navigation Bar */
 .header {
   display: flex;

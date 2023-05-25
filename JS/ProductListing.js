@@ -45,7 +45,30 @@ var products = [
   },
   // Add more product objects here as needed
 ];
-
+var collections = [
+  {
+    id: 1,
+    name: "POP! INDIANA JONES WITH SATCHEL",
+    price: "$12.00",
+    image: "assets/FunkLisingSample/JonesFront.png",
+    imageHover: "assets/FunkLisingSample/JonesBack.png",
+    stock: "Available Collection 1",
+    quality: "Brand New Collection 1",
+    description:
+      "Dr. Jones is on a mission to prevent historical treasures from falling into the wrong hands. Help this legendary archaeologist recover the biblical Ark of the Covenant by joining Pop! Indiana Jones™ on his next expedition. This valuable relic doesn’t belong in a museum—it belongs in your Indiana Jones and the Raiders of the Lost Ark™ collection! Vinyl bobblehead is approximately 4.65-inches tall.",
+  },
+  {
+    id: 2,
+    name: "SNAPS! NIGHTMARE BONNIE",
+    price: "$9.00",
+    image: "assets/FunkLisingSample/NightmareBonnieFront.png",
+    imageHover: "assets/FunkLisingSample/NightmareBonnieBack.png",
+    stock: "Available Collection 2",
+    quality: "Brand New Collection 2",
+    description:
+      "Survive the night at Freddy Fazbear’s in a snap! Close in on Nightmare Bonnie as a Funko SNAPS! collectible. SNAPS! Nightmare Bonnie has six different pieces that snap into place, including a head, two interchangeable faces, a torso, legs, and a guitar. Lock down SNAPS! Nightmare Bonnie and capture him for your Five Nights at Freddy’s set. Collect and mix them all! Vinyl collectible is approximately 3.89-inches tall.",
+  },
+];
 var productContainer = document.querySelector(".product-list-featured");
 
 // Loop through the products data
@@ -121,4 +144,85 @@ function selectProduct(productId) {
 
   // Redirect to the product details page
   window.location.href = "product-item.html";
+}
+
+//Collections
+
+var productContainer = document.querySelector(".product-list");
+
+collections.forEach(function (collection) {
+  // Create a div element for each product item
+  var productItem = document.createElement("div");
+  productItem.classList.add("product");
+
+  // Create a div element for the product image
+  var productImage = document.createElement("div");
+  productImage.classList.add("product-image");
+
+  // Create an anchor element for the product link
+  var productLink = document.createElement("a");
+  productLink.href = "product-item-collection.html";
+
+  // Create an img element for the product image
+  var image = document.createElement("img");
+  image.src = collection.image;
+  image.alt = "Product Image";
+
+  // Set the mouseover and mouseout event handlers for image hover
+  image.onmouseover = function () {
+    this.src = collection.imageHover;
+  };
+
+  image.onmouseout = function () {
+    this.src = collection.image;
+  };
+
+  // Append the image element to the anchor element
+  productLink.appendChild(image);
+
+  // Append the anchor element to the product image div
+  productImage.appendChild(productLink);
+
+  // Create a div element for the product details
+  var productDetails = document.createElement("div");
+  productDetails.classList.add("product-details");
+
+  // Create a heading element for the product title
+  var productTitle = document.createElement("h3");
+  productTitle.classList.add("product-title");
+  productTitle.textContent = collection.name;
+
+  // Create a paragraph element for the product price
+  var productPrice = document.createElement("p");
+  productPrice.classList.add("product-price");
+  productPrice.textContent = collection.price;
+
+  // Append the title and price elements to the product details div
+  productDetails.appendChild(productTitle);
+  productDetails.appendChild(productPrice);
+
+  // Append the product image and details divs to the product item div
+  productItem.appendChild(productImage);
+  productItem.appendChild(productDetails);
+
+  // Append the product item div to the product container
+  productContainer.appendChild(productItem);
+
+  productItem.addEventListener("click", function () {
+    selectProductCollection(collection.id);
+  });
+});
+
+function selectProductCollection(productId) {
+  var selectedProductCollection = collections.find(function (collections) {
+    return collections.id === productId;
+  });
+
+  localStorage.setItem(
+    "selectedProductCollection",
+    JSON.stringify(selectedProductCollection)
+  );
+
+  // Redirect to the product details page
+  window.location.href = "product-item-collection.html";
 }

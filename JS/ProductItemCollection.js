@@ -145,3 +145,12 @@ document.addEventListener("DOMContentLoaded", function () {
 window.addEventListener("popstate", function () {
   location.reload();
 });
+
+function launchResponsiveMenu() {
+  var x = document.getElementById("res-menu-mobile");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}

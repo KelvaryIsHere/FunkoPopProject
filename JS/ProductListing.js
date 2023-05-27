@@ -226,3 +226,12 @@ function selectProductCollection(productId) {
   // Redirect to the product details page
   window.location.href = "product-item-collection.html";
 }
+
+function launchResponsiveMenu() {
+  var x = document.getElementById("res-menu-mobile");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}

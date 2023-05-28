@@ -152,3 +152,14 @@ function launchResponsiveMenu() {
     x.style.display = "block";
   }
 }
+
+window.addEventListener("DOMContentLoaded", function () {
+  var prefersDarkMode = window.matchMedia(
+    "(prefers-color-scheme: dark)"
+  ).matches;
+  var bodyElement = document.body;
+
+  if (prefersDarkMode) {
+    bodyElement.classList.add("dark-mode");
+  }
+});

@@ -22,6 +22,7 @@ body {
 
 .logo {
   flex: 1;
+  font-size: large;
 }
 
 .nav-links {
@@ -231,7 +232,6 @@ body {
 }
 .product-quality-status {
   font-size: 18px;
-  color: black;
   margin-top: 2px;
 }
 .product-interested-item {
@@ -425,6 +425,10 @@ body {
   display: none;
 }
 
+#social-icons-2 {
+  display: inline-block;
+}
+
 @media screen and (max-width: 768px) {
   .nav-links {
     display: none;
@@ -458,4 +462,10 @@ body {
     background-color: #ddd;
     color: black;
   }
+}
+
+/*Dark mode*/
+.dark-mode {
+  background-color: black;
+  color: white;
 }

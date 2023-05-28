@@ -5,6 +5,9 @@ body {
   padding: 0px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-rendering: optimizeLegibility;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 100px;
 }
 
 .social-icons a {
@@ -88,6 +91,13 @@ body {
   padding: 20px;
   display: flex;
   justify-content: space-between;
+  bottom: 0px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  position: absolute;
+  box-sizing: border-box;
 }
 
 .footer-left {
@@ -192,7 +202,7 @@ body {
   gap: 50px;
   height: auto;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 70px;
   margin-bottom: 30px;
 }
 
@@ -204,7 +214,7 @@ body {
 
 .product-title-item {
   font-weight: bolder;
-  font-size: 56px;
+  font-size: clamp(40px, 4vw, 56px);
   margin-bottom: 5px;
   text-transform: uppercase;
 }
@@ -450,7 +460,7 @@ body {
 
   .responsive-menu a {
     display: block;
-    font-size: clamp(16px, 4vw, 20px);
+    font-size: clamp(10px, 4vw, 20px);
     cursor: pointer;
     margin: auto;
     text-decoration: none;

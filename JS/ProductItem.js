@@ -93,6 +93,12 @@ if (selectedProduct) {
   productStockElement.textContent = selectedProduct.stock;
   productQualityElement.textContent = selectedProduct.quality;
 
+  const StockTextContent = productStockElement.textContent.toLowerCase();
+
+  if (StockTextContent.includes("sold out")) {
+    productStockElement.style.color = "red";
+  }
+
   // Clear the selected product data from local storage (optional)
 }
 

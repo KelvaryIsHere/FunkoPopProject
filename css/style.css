@@ -161,6 +161,8 @@ body {
 
 .product-image {
   flex: 1;
+  position: relative;
+  cursor: pointer;
 }
 
 .product-image img {
@@ -168,13 +170,25 @@ body {
   height: auto;
   object-fit: cover;
   border-radius: 5px;
-  cursor: pointer;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 .product-image img:hover {
   transform: scale(1.05, 1.05);
+}
+
+.stock-status-nil {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  border-radius: 20px;
+  color: white;
+  padding: 20px;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .product-details {

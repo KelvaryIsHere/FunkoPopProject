@@ -5,7 +5,7 @@ var products = [
     price: "$100.00",
     image: "assets/FunkLisingSample/FunkoVaderFront.png",
     imageHover: "assets/FunkLisingSample/FunkoVaderBack.png",
-    stock: "Available Test 1",
+    stock: "Available",
     quality: "Brand New Test 1",
     description:
       "Feel a stellar pull towards the Funko exclusive Pop! Mega Darth Vader from Star Wars™. An entire galaxy of adventures awaits! Bring home all the adventures by uniting all your favorite characters from memorable movie and television series moments. Celebrate the most stellar fandom of them all. Vinyl bobblehead is approximately 18-inches tall.",
@@ -16,7 +16,7 @@ var products = [
     price: "$110.00",
     image: "assets/FunkLisingSample/MegaBobaFront.png",
     imageHover: "assets/FunkLisingSample/MegaBobaBack.png",
-    stock: "Available Test 2",
+    stock: "Sold Out",
     quality: "Brand New Test 2",
     description:
       "Boba Fett, the unaltered clone/son of Jango Fett, reemerges from the shadows wearing his father's famous armor and blaster at the ready. Celebrate the most stellar fandom of them all with the Star Wars™ Mega Pop! Boba Fett. Vinyl figure is 18-inches tall.",
@@ -27,7 +27,7 @@ var products = [
     price: "$50.00",
     image: "assets/FunkLisingSample/IronManFront.png",
     imageHover: "assets/FunkLisingSample/IronManBack.png",
-    stock: "Available Test 3",
+    stock: "Available",
     quality: "Brand New Test 3",
     description:
       "Behold! The new premiere Pop! figure, designed to be the front and center, top-shelf collectible, the Die-cast Pop! series. These figures come in die-cast acrylic cases featuring etched details and fasten to the base of the case. The case can be opened, and the figure detached from the base, but with a clear view of all sides of your collectible, you won’t need to unbox it to see all the details. These collectibles come in a telescoping box that features foil details and a foam inner linings to further protect the collectible while in transit. Continue your Die-cast Pop! collection with Marvel’s Pop! Iron Man. Bring home the classic hero Iron Man, aka Tony Stark, as a Die-cast Pop! to crown your Marvel lineup.Die-cast figure is approximately 4-inches tall. Approximate case dimensions: 4.5“W x 6.25“H x 3.5“D.",
@@ -38,7 +38,7 @@ var products = [
     price: "$50.00",
     image: "assets/FunkLisingSample/BiggieFront.png",
     imageHover: "assets/FunkLisingSample/BiggieBack.png",
-    stock: "Available Test 4",
+    stock: "Sold Out",
     quality: "Brand New Test 4",
     description:
       "Go for GOLD in your music collection with the new Funko GOLD Notorious B.I.G. premium vinyl figure. Notorious B.I.G. is dressed to the nines in his white suit for this 5-inch tall collectible. GOLD is the perfect way to commemorate some of your favorite, iconic music artists in your collection, and each figure comes in a sleek, display-ready box that is easy to stack with other GOLD collectibles. Vinyl figure is 5-inches tall.",
@@ -52,7 +52,7 @@ var collections = [
     price: "$12.00",
     image: "assets/FunkLisingSample/JonesFront.png",
     imageHover: "assets/FunkLisingSample/JonesBack.png",
-    stock: "Available Collection 1",
+    stock: "Available",
     quality: "Brand New Collection 1",
     description:
       "Dr. Jones is on a mission to prevent historical treasures from falling into the wrong hands. Help this legendary archaeologist recover the biblical Ark of the Covenant by joining Pop! Indiana Jones™ on his next expedition. This valuable relic doesn’t belong in a museum—it belongs in your Indiana Jones and the Raiders of the Lost Ark™ collection! Vinyl bobblehead is approximately 4.65-inches tall.",
@@ -63,7 +63,7 @@ var collections = [
     price: "$9.00",
     image: "assets/FunkLisingSample/NightmareBonnieFront.png",
     imageHover: "assets/FunkLisingSample/NightmareBonnieBack.png",
-    stock: "Available Collection 2",
+    stock: "Sold Out",
     quality: "Brand New Collection 2",
     description:
       "Survive the night at Freddy Fazbear’s in a snap! Close in on Nightmare Bonnie as a Funko SNAPS! collectible. SNAPS! Nightmare Bonnie has six different pieces that snap into place, including a head, two interchangeable faces, a torso, legs, and a guitar. Lock down SNAPS! Nightmare Bonnie and capture him for your Five Nights at Freddy’s set. Collect and mix them all! Vinyl collectible is approximately 3.89-inches tall.",
@@ -81,6 +81,14 @@ products.forEach(function (product) {
   var productImage = document.createElement("div");
   productImage.classList.add("product-image");
 
+  var productStockElement = product.stock;
+  if (productStockElement.includes("Sold Out")) {
+    var productStockNil = document.createElement("div");
+    productStockNil.classList.add("stock-status-nil");
+    productStockNil.textContent = "Sold Out";
+
+    productImage.appendChild(productStockNil);
+  }
   // Create an anchor element for the product link
   var productLink = document.createElement("a");
   productLink.href = "product-item.html";
@@ -92,11 +100,23 @@ products.forEach(function (product) {
 
   // Set the mouseover and mouseout event handlers for image hover
   image.onmouseover = function () {
-    this.src = product.imageHover;
+    var productStockElement = product.stock;
+    if (!productStockElement.includes("Sold Out")) {
+      this.src = product.imageHover;
+    } else {
+      image.style.pointerEvents = "none";
+    }
+    // this.src = product.imageHover;
   };
 
   image.onmouseout = function () {
-    this.src = product.image;
+    var productStockElement = product.stock;
+    if (!productStockElement.includes("Sold Out")) {
+      this.src = product.image;
+    } else {
+      image.style.pointerEvents = "none";
+    }
+    // this.src = product.image;
   };
 
   // Append the image element to the anchor element
@@ -159,6 +179,15 @@ collections.forEach(function (collection) {
   var productImage = document.createElement("div");
   productImage.classList.add("product-image");
 
+  var productStockElement = collection.stock;
+  if (productStockElement.includes("Sold Out")) {
+    var productStockNil = document.createElement("div");
+    productStockNil.classList.add("stock-status-nil");
+    productStockNil.textContent = "Sold Out";
+
+    productImage.appendChild(productStockNil);
+  }
+
   // Create an anchor element for the product link
   var productLink = document.createElement("a");
   productLink.href = "product-item-collection.html";
@@ -170,11 +199,23 @@ collections.forEach(function (collection) {
 
   // Set the mouseover and mouseout event handlers for image hover
   image.onmouseover = function () {
-    this.src = collection.imageHover;
+    var productStockElement = collection.stock;
+    if (!productStockElement.includes("Sold Out")) {
+      this.src = collection.imageHover;
+    } else {
+      image.style.pointerEvents = "none";
+    }
+    // this.src = product.imageHover;
   };
 
   image.onmouseout = function () {
-    this.src = collection.image;
+    var productStockElement = collection.stock;
+    if (!productStockElement.includes("Sold Out")) {
+      this.src = collection.image;
+    } else {
+      image.style.pointerEvents = "none";
+    }
+    // this.src = product.image;
   };
 
   // Append the image element to the anchor element

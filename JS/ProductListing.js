@@ -38,7 +38,7 @@ var products = [
     price: "$50.00",
     image: "assets/FunkLisingSample/BiggieFront.png",
     imageHover: "assets/FunkLisingSample/BiggieBack.png",
-    stock: "Sold Out",
+    stock: "Available",
     quality: "Brand New Test 4",
     description:
       "Go for GOLD in your music collection with the new Funko GOLD Notorious B.I.G. premium vinyl figure. Notorious B.I.G. is dressed to the nines in his white suit for this 5-inch tall collectible. GOLD is the perfect way to commemorate some of your favorite, iconic music artists in your collection, and each figure comes in a sleek, display-ready box that is easy to stack with other GOLD collectibles. Vinyl figure is 5-inches tall.",

@@ -187,8 +187,9 @@ body {
   border-radius: 20px;
   color: white;
   padding: 20px;
-  font-size: 25px;
+  font-size: clamp(17px, 4vw, 25px);
   font-weight: bold;
+  text-align: center;
 }
 
 .product-details {

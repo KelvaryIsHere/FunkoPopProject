@@ -26,6 +26,18 @@ body {
 .logo {
   flex: 1;
   font-size: large;
+  font-family: "Pacifico", cursive;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo a,
+.logo a:visited,
+.logo a:hover,
+.logo a:active {
+  color: inherit;
 }
 
 .nav-links {
